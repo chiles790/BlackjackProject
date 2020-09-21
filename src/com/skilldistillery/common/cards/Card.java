@@ -3,17 +3,16 @@ package com.skilldistillery.common.cards;
 public class Card {
 	private Suit suit;
 	private Rank rank;
-	
+
 	public Card(Rank rank, Suit suit) {
 		this.suit = suit;
 		this.rank = rank;
-		
+
 	}
 
 	public int getValue() {
 		return rank.getValue();
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -44,6 +43,5 @@ public class Card {
 	public String toString() {
 		return rank + " of " + suit;
 	}
-	
 
 }

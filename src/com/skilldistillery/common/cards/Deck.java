@@ -5,49 +5,35 @@ import java.util.Collections;
 import java.util.List;
 
 public class Deck {
-	private static List<Card> cards;
-
-	public Deck() {
-//		cards = createDeck();
-		cards = new ArrayList<> (52);
-		for (Suit S : Suit.values()) {
-			for (Rank R : Rank.values()) {
-				cards.add(new Card(R, S));
+		private static List<Card> cards;
+		public Deck() {
+			cards = new ArrayList<>(52);
+			for (Suit S : Suit.values()) {
+				for (Rank R : Rank.values()) {
+					cards.add(new Card(R, S));
+				}
 			}
 		}
-	}
-
-	public static int checkDeckSize() {
-		return cards.size();
-	}
-
-	public static Card dealCard() {
-		return cards.remove(0);
-	}
-
-	public void shuffle() {
-		Collections.shuffle(cards);
-	}
-
-}
-//jeremys version
-//	public class Deck {
-//		private List<Card> cards;
-//		public Deck() {
-//			cards = new ArrayList<>(52);
-//			for (Suit suit : Suit.values()) {
-//				for (Rank rank : Rank.values()) {
-//					cards.add(new Card(suit, rank));
-//				}
-//			}
-//		}
-//		public int checkDeckSize() {
-//			return cards.size();
-//		}
-//		public Card dealCard() {
-//			return cards.remove(0);
-//		}
-//		public void shuffle() {
-//			Collections.shuffle(cards);
-//		}
-//	}
+		public int checkDeckSize() {
+			return cards.size();
+		}
+		public static Card dealCard() {
+			return cards.remove(0);
+		}
+		public static void shuffle() { 
+			Collections.shuffle(cards);
+			System.out.println("Deck is shuffled"); // added this print out to show the user that the deck is 
+			//shuffled after each round.
+			
+		}
+		
+		public static void initialDrawPlayer(String name, Card card){
+			
+			System.out.println(name + " draws " + card + ".");
+		}
+		// split above and below to easily print both players cards but keep dealers 2nd card a secret
+		public static void initialDrawDealer(String name, Card card){
+			
+			System.out.println(name + " draws " + card + ".");
+		}
+		}
