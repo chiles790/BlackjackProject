@@ -60,8 +60,8 @@ public class CardTest {
 
 			playerChoice = Hand.hitOrStay();
 
-			// Loop of choice hit
 			while (playerChoice.equals("hit")) {
+				// Loop of player choice hit
 
 				player.addCard(Deck.dealCard());
 

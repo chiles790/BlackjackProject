@@ -42,7 +42,7 @@ public class Hand {
 
 		String answer;
 
-		// Ask player to hit or stay f
+		// Ask player to hit or stay
 		System.out.print(playerName + " would you like to hit or stay ");
 		answer = input.next();
 
